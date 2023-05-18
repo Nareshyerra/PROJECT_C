@@ -11,6 +11,9 @@ import { SharedService } from './shared.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
+import { AddEditEmpComponent } from './employee/add-edit-emp/add-edit-emp.component';
+import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HomeComponent } from './home/home.component';
     AddEditDepComponent,
     ShowDepComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    AddEditEmpComponent,
+    ShowEmpComponent
+   
   ],
   imports: [
     BrowserModule,

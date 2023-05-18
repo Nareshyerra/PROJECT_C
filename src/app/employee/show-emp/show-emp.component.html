@@ -5,7 +5,7 @@ data-toggle="modal" data-target="#exampleModal"
 (click)="addClick()"
 data-backdrop="static" data-keyboard="false"
 >
-    Add Department
+    Add Employee
   </button>
   
   <!-- Modal -->
@@ -21,8 +21,8 @@ data-backdrop="static" data-keyboard="false"
           </button>
         </div>
         <div class="modal-body">
-            <app-add-edit-dep [dep]="dep" *ngIf="ActivateAddEditDepComp">
-            </app-add-edit-dep>
+            <app-add-edit-emp [emp]="emp" *ngIf="ActivateAddEditEmpComp">
+            </app-add-edit-emp>
         </div>
       </div>
     </div>
@@ -33,20 +33,22 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>
-          
-              
-              DepartmentId</th>
-            <th>
-         
-              Department Name</th>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Department</th>
+            <th>Date Of Joining</th>
+            <th>Reporting Manager</th>
+            <th>SEX</th>
             <th>Options</th>
+         
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let dataItem of DepartmentList">
-            <td>{{dataItem.id}}</td>
-            <td>{{dataItem.DepartmentName}}</td>
+        <tr *ngFor="let dataItem of EmployeeList">
+            <td>{{dataItem.DepartmentId}}</td>
+            <td>{{dataItem.title}}</td>
+            <!-- <td>{{dataItem.Department}}</td>
+            <td>{{dataItem.DateOfJoining}}</td> -->
             <td>
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
@@ -67,14 +69,10 @@ data-backdrop="static" data-keyboard="false"
                 </button>
             </td>
         </tr>
-       
-    
     </tbody>
 </table>
-<div class="department">
-  
-  <div class="row mt-5" *ngIf="DepartmentList.length == 0">
+<div class="row mt-5" *ngIf="EmployeeList.length == 0">
     <div class="col text-center">
-      <span class="text-secondary fs-2 fw-bold fst-italic">Department list is Empty</span>
+      <span class="text-secondary fs-2 fw-bold fst-italic">Emplyoee list is Empty</span>
     </div>
   </div>

@@ -1,0 +1,30 @@
+.style{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    
+}
+
+  /* Tooltip styling */
+  input:invalid {
+    border: 1px solid red;
+  }
+
+  input:invalid:hover {
+    /* Additional styling for the tooltip */
+    position: relative;
+  }
+
+  input:invalid:hover::after {
+    /* Styling the tooltip content */
+    content: attr(title);
+    background-color: red;
+    color: white;
+    padding: 4px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+
+
