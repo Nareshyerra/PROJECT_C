@@ -3,3 +3,22 @@
     display: flex;
     justify-content: center;
   }
+
+  .image{
+    width: 300px;
+    height: 200px;
+  }
+ .container{
+    width: 100%;
+    display: block;
+ }
+ html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .content {
+    height: 100%;
+  }
+  

@@ -1,30 +1,37 @@
-<div class="container">
+
 
   <!-- <h1 class="d-flex justify-content-center">SOFTPATH EMPLOYEE</h1>
    -->
-   <div class="centered-image">
-    <img src="assets\softpath logo.png" alt="My Image" class="image">
+   <!-- <div class="centered-image">
+    <img src="https://media.licdn.com/dms/image/C560BAQHH4C7RFeZd4A/company-logo_200_200/0/1634298357689?e=2147483647&v=beta&t=ARjreerBJx-zPtf2AVS1cypWGPHo5dBjL9W702OV9N4" alt="My Image" class="image">
   </div>
+   -->
   
-
-  <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-  <ul class="navbar-nav">
-    <li class="nav-item">
-        <button routerLink="home"
-        class="m-1 btn btn-light btn-outline-primary" Button>HOME</button>
-    </li>
+ 
+    <div class="container">
+    <img src="assets/images/Logo - Copy.png" alt="">
+    <nav class="navbar navbar-expand-sm bg-light navbar-dark">
+    <ul class="navbar-nav">
       <li class="nav-item">
-          <button routerLink="department"
-          class="m-1 btn btn-light btn-outline-primary" Button>Departments</button>
+          <button routerLink="home"
+          class="m-1 btn btn-light btn-outline-primary" Button>HOME</button>
       </li>
+        <li class="nav-item">
+            <button routerLink="department"
+            class="m-1 btn btn-light btn-outline-primary" Button>Departments</button>
+        </li>
+  
+        <li class="nav-item">
+            <button routerLink="employee"
+            class="m-1 btn btn-light btn-outline-primary" Button>Employees</button>
+        </li>
+    </ul>
+    </nav>
+  
+  <router-outlet></router-outlet>
+  
+  </div>
 
-      <li class="nav-item">
-          <button routerLink="employee"
-          class="m-1 btn btn-light btn-outline-primary" Button>Employees</button>
-      </li>
-  </ul>
-  </nav>
 
-<router-outlet></router-outlet>
 
-</div>
+
