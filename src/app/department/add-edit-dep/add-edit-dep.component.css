@@ -5,10 +5,14 @@
     
 }
 
-  /* Tooltip styling */
-  input:invalid {
-    border: 1px solid red;
-  }
+
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+}
+
+
+
+  
 
   input:invalid:hover {
     /* Additional styling for the tooltip */
@@ -27,4 +31,11 @@
     width: 100%;
   }
 
+
+  .error-message {
+    color: red;
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  
 

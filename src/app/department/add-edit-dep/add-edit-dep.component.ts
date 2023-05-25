@@ -7,6 +7,9 @@ import {SharedService} from 'src/app/shared.service';
   styleUrls: ['./add-edit-dep.component.css']
 })
 export class AddEditDepComponent implements OnInit {
+  ActivateAddEditDepComp: boolean | undefined;
+ 
+ 
 
   constructor(private service:SharedService) { }
 
@@ -34,5 +37,39 @@ export class AddEditDepComponent implements OnInit {
     alert(res.toString());
     });
   }
+  closeClick(){
+    this.ActivateAddEditDepComp=false;
+    this.refreshDepList();
+  }
+  refreshDepList() {
+    throw new Error('Method not implemented.');
+  }
 
+
+  
+  textInput!: string;
+  emptyError!: boolean;
+  numberError!: boolean;
+
+  validateInput() {
+    if (this.textInput === '') {
+      this.emptyError = true;
+      this.numberError = false;
+    } else if (/\d/.test(this.textInput)) {
+      this.emptyError = false;
+      this.numberError = true;
+    } else {
+      this.emptyError = false;
+      this.numberError = false;
+    }
+  }
+
+
+
+
+
+
+
+  
+ 
 }

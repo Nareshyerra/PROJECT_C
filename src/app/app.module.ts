@@ -15,6 +15,7 @@ import { AddEditEmpComponent } from './employee/add-edit-emp/add-edit-emp.compon
 import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,10 @@ import { ShowEmpComponent } from './employee/show-emp/show-emp.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+ 
+    
+ 
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

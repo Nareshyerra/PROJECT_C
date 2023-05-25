@@ -1,21 +1,33 @@
+
 <div class="form-froup row">
 
     <label class="col-sm-2 col-form-label">Department Name</label>
     <div class="col-sm-10">
+
         
-        <input type="text" id="form3Example4c" class="form-control" minlength="2" title="Max 30 characters can be taken" placeholder="Only Alphabets no numerics" [(ngModel)]="DepartmentName"/>
-                   
-    </div>
+        <input type="text" [(ngModel)]="textInput"  id="form3Example4c" class="form-control" (input)="validateInput()" title="Max 30 characters can be taken" placeholder="Only Alphabets no numerics"  name="passwordfield" ngModel required #passwordfield="ngModel"/>
+      
+        <div *ngIf="numberError" class="error-message">Numbers are not allowed!</div>
+        <div *ngIf="passwordfield.touched && passwordfield.invalid" class="error-message">Reqired field must not be empty</div>
+       
+</div>
 
 
 </div>
+
 <div class="style p-3">
-    <button class="btn-primary mr-2">cancle</button>
+    <button type="button" class="btn btn-primary mr-3" 
+    data-dismiss="modal" aria-label="Close"
+    (click)="closeClick()" >Cancel
+    
+      </button>
 <button (click)="addDepartment()" *ngIf="dep.DepartmentId==0" class="btn btn-primary">
     save
 </button>
 
+
 </div>
+
 <button (click)="updateDepartment()" *ngIf="dep.DepartmentId!=0" class="btn btn-primary">
     Update
 </button>
